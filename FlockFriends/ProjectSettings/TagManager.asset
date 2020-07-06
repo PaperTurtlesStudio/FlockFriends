@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Floor
+  - ProceduralMap
+  - Walls
+  - Decorate
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -13,7 +18,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Obstacle
   - 
   - 
   - 
@@ -40,4 +45,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3111059499
+    locked: 0
+  - name: SideBounds
+    uniqueID: 838324737
+    locked: 0
+  - name: Obstacles
+    uniqueID: 2033821899
+    locked: 0
+  - name: Player
+    uniqueID: 2794209071
     locked: 0
