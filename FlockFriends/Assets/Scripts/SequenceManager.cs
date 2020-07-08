@@ -36,7 +36,6 @@ public class SequenceManager : MonoBehaviour
                 return sequencePool[randomNum];
                 break;
             }
-            
         }
         return null;
     }
@@ -56,7 +55,10 @@ public class SequenceManager : MonoBehaviour
             if(sequencePool[i].transform.position.y < -105)
             {
                 sequencePool[i].SetActive(false);
-                sequencePool[i].transform.position = new Vector3(0,0,0);
+            }
+            if(sequencePool[i].activeInHierarchy == false)
+            {
+                sequencePool[i].transform.position = new Vector3(-9.989263f, 50f, 0);
             }
         }
     }
