@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class ObstacleDestroy : MonoBehaviour
+
+public class Collectible : MonoBehaviour
 {
 
     public GameObject gameManager;
     PlayerManager pm;
 
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,8 @@ public class ObstacleDestroy : MonoBehaviour
     {
         if(collision.gameObject.name == "Player")
         {
-            pm.CharacterDeath(collision.gameObject);
+            Destroy(collision.otherCollider.gameObject);
+            pm.breadCrumbs++;
         }
     }
 }
