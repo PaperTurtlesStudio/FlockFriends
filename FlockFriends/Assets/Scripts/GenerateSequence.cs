@@ -12,6 +12,7 @@ public class GenerateSequence : MonoBehaviour
     {
         gameManager = GameObject.Find("GameManager");
         sqm = gameManager.GetComponent<SequenceManager>();
+
     }
 
     // Update is called once per frame

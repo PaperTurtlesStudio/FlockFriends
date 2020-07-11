@@ -8,7 +8,6 @@ public class SequenceManager : MonoBehaviour
     private GameObject sequencePoolCont;
     [SerializeField]
     private List<GameObject> sequencePool;
-    
     public List<GameObject> sequences = new List<GameObject>();
 
     private List<GameObject> GenerateSequence(int amount)

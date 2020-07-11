@@ -8,20 +8,12 @@ public class SequenceMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Vector2 movement = new Vector2(0, -1);
 
-
-
-
     // Start is called before the first frame update
     void Start()
     { 
         
     } 
-        
-        
- 
-        
-    
-
+  
     // Update is called once per frame
     void Update()
     {
