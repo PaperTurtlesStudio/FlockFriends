@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5f;
     public Rigidbody2D rb;
     public Transform playerModel;
+    public Transform sideCharacter1;
+    public Transform sideCharacter2;
+    public Transform sideCharacter3;
     public Vector2 playerMovement;
 
     // Start is called before the first frame update
@@ -16,10 +19,18 @@ public class PlayerMovement : MonoBehaviour
         if(playerModel.rotation.eulerAngles.z == -45)
         {
             playerModel.Rotate(Vector3.forward * 45);
+            sideCharacter1.Rotate(Vector3.forward * 45);
+            sideCharacter2.Rotate(Vector3.forward * 45);
+            sideCharacter3.Rotate(Vector3.forward * 45);
+                    
+                    
         }
         else if(playerModel.rotation.eulerAngles.z == 45)
         {
             playerModel.Rotate(Vector3.forward * -45);
+            sideCharacter1.Rotate(Vector3.forward * -45);
+            sideCharacter2.Rotate(Vector3.forward * -45);
+            sideCharacter3.Rotate(Vector3.forward * -45);
         }
         
     }
@@ -34,19 +45,31 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             playerModel.Rotate(Vector3.forward * -45);
+            sideCharacter1.Rotate(Vector3.forward * -45);
+            sideCharacter2.Rotate(Vector3.forward * -45);
+            sideCharacter3.Rotate(Vector3.forward * -45);
         }
         else if(Input.GetKeyUp(KeyCode.RightArrow))
         {
             playerModel.Rotate(Vector3.forward * 45);
+            sideCharacter1.Rotate(Vector3.forward * 45);
+            sideCharacter2.Rotate(Vector3.forward * 45);
+            sideCharacter3.Rotate(Vector3.forward * 45);
         }
 
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
             playerModel.Rotate(Vector3.forward * 45);
+            sideCharacter1.Rotate(Vector3.forward * 45);
+            sideCharacter2.Rotate(Vector3.forward * 45);
+            sideCharacter3.Rotate(Vector3.forward * 45);
         }
         else if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
             playerModel.Rotate(Vector3.forward * -45);
+            sideCharacter1.Rotate(Vector3.forward * -45);
+            sideCharacter2.Rotate(Vector3.forward * -45);
+            sideCharacter3.Rotate(Vector3.forward * -45);
         }
         
         rb.MovePosition(rb.position + (playerMovement * speed * Time.fixedDeltaTime));
