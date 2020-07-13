@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Collectible : MonoBehaviour
 {
 
-    public GameObject gameManager;
+    GameObject gameManager;
     PlayerManager pm;
 
     
@@ -28,8 +28,13 @@ public class Collectible : MonoBehaviour
     {
         if(collision.gameObject.name == "Player")
         {
-            Destroy(collision.otherCollider.gameObject);
-            pm.breadCrumbs++;
+            CollectBread();
         }
+    }
+
+    void CollectBread()
+    {
+        Destroy(gameObject);
+        pm.breadCrumbs++;
     }
 }

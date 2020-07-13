@@ -18,19 +18,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if(playerModel.rotation.eulerAngles.z == -45)
         {
-            playerModel.Rotate(Vector3.forward * 45);
-            sideCharacter1.Rotate(Vector3.forward * 45);
-            sideCharacter2.Rotate(Vector3.forward * 45);
-            sideCharacter3.Rotate(Vector3.forward * 45);
-                    
-                    
+            RotateLeft(playerModel, sideCharacter1, sideCharacter2, sideCharacter3);
         }
         else if(playerModel.rotation.eulerAngles.z == 45)
         {
-            playerModel.Rotate(Vector3.forward * -45);
-            sideCharacter1.Rotate(Vector3.forward * -45);
-            sideCharacter2.Rotate(Vector3.forward * -45);
-            sideCharacter3.Rotate(Vector3.forward * -45);
+            RotateRight(playerModel, sideCharacter1, sideCharacter2, sideCharacter3);
         }
         
     }
@@ -40,38 +32,42 @@ public class PlayerMovement : MonoBehaviour
         playerMovement.x = Input.GetAxisRaw("Horizontal");
         playerMovement.y = 0;
 
+        rb.MovePosition(rb.position + (playerMovement * speed * Time.fixedDeltaTime));
 
-
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            playerModel.Rotate(Vector3.forward * -45);
-            sideCharacter1.Rotate(Vector3.forward * -45);
-            sideCharacter2.Rotate(Vector3.forward * -45);
-            sideCharacter3.Rotate(Vector3.forward * -45);
+            RotateRight(playerModel, sideCharacter1, sideCharacter2, sideCharacter3);
         }
         else if(Input.GetKeyUp(KeyCode.RightArrow))
         {
-            playerModel.Rotate(Vector3.forward * 45);
-            sideCharacter1.Rotate(Vector3.forward * 45);
-            sideCharacter2.Rotate(Vector3.forward * 45);
-            sideCharacter3.Rotate(Vector3.forward * 45);
+            RotateLeft(playerModel, sideCharacter1, sideCharacter2, sideCharacter3);
         }
 
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            playerModel.Rotate(Vector3.forward * 45);
-            sideCharacter1.Rotate(Vector3.forward * 45);
-            sideCharacter2.Rotate(Vector3.forward * 45);
-            sideCharacter3.Rotate(Vector3.forward * 45);
+            RotateLeft(playerModel, sideCharacter1, sideCharacter2, sideCharacter3);
         }
         else if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            playerModel.Rotate(Vector3.forward * -45);
-            sideCharacter1.Rotate(Vector3.forward * -45);
-            sideCharacter2.Rotate(Vector3.forward * -45);
-            sideCharacter3.Rotate(Vector3.forward * -45);
+            RotateRight(playerModel, sideCharacter1, sideCharacter2, sideCharacter3);
         }
         
-        rb.MovePosition(rb.position + (playerMovement * speed * Time.fixedDeltaTime));
+        
+    }
+
+    void RotateLeft(Transform alfanso, Transform pengo, Transform ostar, Transform turts)
+    {
+        alfanso.Rotate(Vector3.forward * 45);
+        pengo.Rotate(Vector3.forward * 45);
+        ostar.Rotate(Vector3.forward * 45);
+        turts.Rotate(Vector3.forward * 45);
+    } 
+
+    void RotateRight(Transform alfanso, Transform pengo, Transform ostar, Transform turts)
+    {
+        alfanso.Rotate(Vector3.forward * -45);
+        pengo.Rotate(Vector3.forward * -45);
+        ostar.Rotate(Vector3.forward * -45);
+        turts.Rotate(Vector3.forward * -45);
     }
 }

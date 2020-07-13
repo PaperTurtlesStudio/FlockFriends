@@ -8,11 +8,7 @@ public class CharacterMovement : MonoBehaviour
     Vector3 moveRight = new Vector3(1, 0, 0);
     GameObject Player;
     PlayerMovement playerMovement;
-
     public float characterSpeed;
-
-
-    bool isAvoid;
 
     // Start is called before the first frame update
     void Start()
@@ -33,40 +29,40 @@ public class CharacterMovement : MonoBehaviour
         {
             if(collision.gameObject.transform.position.x > gameObject.transform.position.x)
             {
-                Debug.Log("MovingLeft");
                 StartCoroutine(MoveLeft());
             }
             else
             {
-                Debug.Log("Moving Right");
                 StartCoroutine(MoveRight());
             }
         }
-        
-
-
     }
     
     IEnumerator MoveRight()
     {
-        transform.position += moveRight * playerMovement.speed * characterSpeed * Time.fixedDeltaTime;
-
+        MovingRight();
         yield return new WaitForSeconds(1f);
 
-        transform.position += moveLeft * playerMovement.speed * characterSpeed * Time.fixedDeltaTime;
-
+        MovingLeft();
         yield return new WaitForSeconds(1f);
     }
 
     IEnumerator MoveLeft()
     {
-        transform.position += moveLeft * playerMovement.speed * characterSpeed * Time.fixedDeltaTime;
-
+        MovingLeft();
         yield return new WaitForSeconds(1f);
 
-        transform.position += moveRight * playerMovement.speed * characterSpeed * Time.fixedDeltaTime;
-
+        MovingRight();
         yield return new WaitForSeconds(1f);
     }
-    
+
+    void MovingLeft()
+    {
+        transform.position += moveLeft * playerMovement.speed * characterSpeed * Time.fixedDeltaTime;
+    }
+
+    void MovingRight()
+    {
+        transform.position += moveRight * playerMovement.speed * characterSpeed * Time.fixedDeltaTime;
+    }
 }

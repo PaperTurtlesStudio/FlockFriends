@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public string Level = "Forest";
+    public int NumberOfSequences = 5;
+    public int AmountSequencesPassed = 0;
+
     // Start is called before the first frame update
     void Start()
     {

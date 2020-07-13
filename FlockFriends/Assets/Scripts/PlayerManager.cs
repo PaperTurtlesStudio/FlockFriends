@@ -14,6 +14,10 @@ public class PlayerManager : MonoBehaviour
     public GameObject sequence;
     SequenceMovement sm;
 
+    public GameObject pengo;
+    public GameObject ostar;
+    public GameObject turts;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,10 +36,11 @@ public class PlayerManager : MonoBehaviour
         Destroy(collision.gameObject);
         playerMove.speed = 0;
         sm.speed = 0;
-        restartButton.SetActive(true);
-        //destroy character
-        //pause sequence movement
+
         //open up death menu
+        restartButton.SetActive(true);
+
+        //pause sequence movement
     }
 
     public void PauseGame()
@@ -45,5 +50,19 @@ public class PlayerManager : MonoBehaviour
         //allow for clicking on buttons
     }
 
-    
+    public void AddCharacter()
+    {
+        if(pengo.activeInHierarchy == false)
+        {
+            pengo.SetActive(true);
+        }
+        else if(ostar.activeInHierarchy == false)
+        {
+            ostar.SetActive(true);
+        }
+        else if(turts.activeInHierarchy == false)
+        {
+            turts.SetActive(true);
+        }
+    }
 }

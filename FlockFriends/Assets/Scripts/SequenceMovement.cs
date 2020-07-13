@@ -5,15 +5,15 @@ using UnityEngine;
 public class SequenceMovement : MonoBehaviour
 {
     public float speed = 5f;
-    public Rigidbody2D rb;
+    Rigidbody2D rb;
     public Vector2 movement = new Vector2(0, -1);
 
-    // Start is called before the first frame update
+
     void Start()
-    { 
-        
-    } 
-  
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+    }
+
     // Update is called once per frame
     void Update()
     {
