@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SequenceMovement : MonoBehaviour
 {
-    public float speed = 5f;
+
+    GameObject gameManager;
+    SequenceManager sequenceManager;
     Rigidbody2D rb;
     public Vector2 movement = new Vector2(0, -1);
 
@@ -12,11 +14,13 @@ public class SequenceMovement : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        gameManager = GameObject.Find("GameManager");
+        sequenceManager = gameManager.GetComponent<SequenceManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.MovePosition(rb.position + (movement * speed * Time.fixedDeltaTime));
+        rb.MovePosition(rb.position + (movement * sequenceManager.SequenceSpeed * Time.fixedDeltaTime));
     }
 }

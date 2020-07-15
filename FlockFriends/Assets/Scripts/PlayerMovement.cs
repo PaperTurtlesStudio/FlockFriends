@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
     public Transform sideCharacter2;
     public Transform sideCharacter3;
     public Vector2 playerMovement;
+    public Canvas pauseMenu;
+
+    GameObject gameManager;
+    SequenceManager sequenceManager;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +29,9 @@ public class PlayerMovement : MonoBehaviour
         {
             RotateRight(playerModel, sideCharacter1, sideCharacter2, sideCharacter3);
         }
-        
+
+        gameManager = GameObject.Find("GameManager");
+        sequenceManager = gameManager.GetComponent<SequenceManager>();
     }
     // Update is called once per frame
     void Update()
@@ -52,7 +59,19 @@ public class PlayerMovement : MonoBehaviour
             RotateRight(playerModel, sideCharacter1, sideCharacter2, sideCharacter3);
         }
         
-        
+        if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.P))
+        {
+            pauseMenu.gameObject.SetActive(true);
+            if (pauseMenu)
+            {
+                sequenceManager.SequenceSpeed = 0;
+            }
+        }
+
+        if (pauseMenu.gameObject.activeInHierarchy == false)
+        {
+            sequenceManager.SequenceSpeed = 7;
+        }
     }
 
     void RotateLeft(Transform alfanso, Transform pengo, Transform ostar, Transform turts)

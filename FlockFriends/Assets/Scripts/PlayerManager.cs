@@ -10,9 +10,8 @@ public class PlayerManager : MonoBehaviour
     public int breadCrumbs = 0;
     public GameObject player;
     PlayerMovement playerMove;
-    public GameObject restartButton;
-    public GameObject sequence;
-    SequenceMovement sm;
+    public GameObject deathMenu;
+    SequenceManager sequenceManager;
 
     public GameObject pengo;
     public GameObject ostar;
@@ -22,7 +21,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         playerMove = player.GetComponent<PlayerMovement>();
-        sm = sequence.GetComponent<SequenceMovement>();
+        sequenceManager = gameObject.GetComponent<SequenceManager>();
     }
 
     // Update is called once per frame
@@ -35,19 +34,10 @@ public class PlayerManager : MonoBehaviour
     {
         Destroy(collision.gameObject);
         playerMove.speed = 0;
-        sm.speed = 0;
+        sequenceManager.SequenceSpeed = 0;
 
         //open up death menu
-        restartButton.SetActive(true);
-
-        //pause sequence movement
-    }
-
-    public void PauseGame()
-    {
-        //pause movement
-        //bring up mouse
-        //allow for clicking on buttons
+        deathMenu.SetActive(true);
     }
 
     public void AddCharacter()

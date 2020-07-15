@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SequenceManager : MonoBehaviour
 {
+    public int SequenceSpeed = 7;
+
+    Canvas pauseMenu;
+
     [SerializeField]
     private GameObject ForestSequencePoolCont;
     [SerializeField]
