@@ -44,7 +44,7 @@ public class GenerateSequence : MonoBehaviour
 
                         //Generate the transition Sequence
                         sequencesHolder = sqm.RequestSequence(sqm.TransitionSequencePool);
-                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 50f);
+                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 58f);
 
                         break;
                     case "Mountain":
@@ -56,7 +56,7 @@ public class GenerateSequence : MonoBehaviour
 
                         //Generate the transition Sequence
                         sequencesHolder = sqm.RequestSequence(sqm.TransitionSequencePool);
-                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 50f);
+                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 58f);
                         break;
                     case "City":
                         //switch level to next level
@@ -67,7 +67,7 @@ public class GenerateSequence : MonoBehaviour
 
                         //Generate the transition Sequence
                         sequencesHolder = sqm.RequestSequence(sqm.TransitionSequencePool);
-                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 50f);
+                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 58f);
 
                         //If Side Character is set inactive then set active
                         playerManager.AddCharacter();
@@ -87,21 +87,21 @@ public class GenerateSequence : MonoBehaviour
                         sequencesHolder = sqm.RequestSequence(sqm.ForestSequencePool);
 
                         //set loaction
-                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 50f);
+                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 58f);
                         break;
                     case "Mountain":
                         //request sequence for mountain
                         sequencesHolder = sqm.RequestSequence(sqm.MountainSequencePool);
 
                         //Set location
-                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 50f);
+                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 58f);
                         break;
                     case "City":
                         //RequestSequence for city
                         sequencesHolder = sqm.RequestSequence(sqm.CitySequencePool);
 
                         //Set Location
-                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 50f);
+                        sequencesHolder.GetComponent<Rigidbody2D>().position = new Vector2(-9.989263f, 58f);
                         break;
                 }
                 levelManager.AmountSequencesPassed++;

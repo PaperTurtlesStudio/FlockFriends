@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
-    public int breadCrumbs = 0;
+    public StoreManager storeManager;
     public GameObject player;
     PlayerMovement playerMove;
     public GameObject deathMenu;
@@ -35,9 +35,12 @@ public class PlayerManager : MonoBehaviour
         Destroy(collision.gameObject);
         playerMove.speed = 0;
         sequenceManager.SequenceSpeed = 0;
+        FindObjectOfType<AudioManager>().Play("PlayerDeath");
 
         //open up death menu
         deathMenu.SetActive(true);
+
+        //play death sound
     }
 
     public void AddCharacter()

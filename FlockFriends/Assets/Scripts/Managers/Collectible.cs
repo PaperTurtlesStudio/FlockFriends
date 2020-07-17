@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Collectible : MonoBehaviour
 {
-
+    public StoreManager storeManager;
     GameObject gameManager;
     PlayerManager pm;
 
@@ -16,6 +16,7 @@ public class Collectible : MonoBehaviour
     {
         gameManager = GameObject.Find("GameManager");
         pm = gameManager.GetComponent<PlayerManager>();
+        storeManager = gameManager.GetComponent<StoreManager>();
     }
 
     // Update is called once per frame
@@ -28,13 +29,9 @@ public class Collectible : MonoBehaviour
     {
         if(collision.gameObject.name == "Player")
         {
-            CollectBread();
+            storeManager.CollectBread(gameObject);
         }
     }
 
-    void CollectBread()
-    {
-        Destroy(gameObject);
-        pm.breadCrumbs++;
-    }
+    
 }

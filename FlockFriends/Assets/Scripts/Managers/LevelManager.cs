@@ -20,9 +20,4 @@ public class LevelManager : MonoBehaviour
     {
         
     }
-
-    public void onRestart()
-    {
-        SceneManager.LoadScene("Level");
-    }
 }
