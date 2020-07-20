@@ -12,35 +12,57 @@ public class PlayerManager : MonoBehaviour
     PlayerMovement playerMove;
     public GameObject deathMenu;
     SequenceManager sequenceManager;
+    ItemManager itemManager;
+    PlayerManager playerManager;
 
     public GameObject pengo;
     public GameObject ostar;
     public GameObject turts;
+
+
+    private void Awake()
+    {
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         playerMove = player.GetComponent<PlayerMovement>();
         sequenceManager = gameObject.GetComponent<SequenceManager>();
-    }
+        storeManager = gameObject.GetComponent<StoreManager>();
+        itemManager = gameObject.GetComponent<ItemManager>();
+        playerManager = gameObject.GetComponent<PlayerManager>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (!itemManager.runOnce)
+        {
+            SavePlayer data = SaveSystem.LoadPlayer(itemManager, playerManager, storeManager);
+
+            if (data != null)
+            {
+                pengo.SetActive(data.pengoActive);
+                ostar.SetActive(data.ostarActive);
+                turts.SetActive(data.turtsActive);
+            }
+        }
     }
 
     public void CharacterDeath(GameObject collision)
     {
+        
         Destroy(collision.gameObject);
+        
+        
         playerMove.speed = 0;
         sequenceManager.SequenceSpeed = 0;
-        FindObjectOfType<AudioManager>().Play("PlayerDeath");
-
+        
         //open up death menu
         deathMenu.SetActive(true);
 
         //play death sound
+        FindObjectOfType<AudioManager>().Play("PlayerDeath");
+
+        //Save Game
+        SaveGame();
     }
 
     public void AddCharacter()
@@ -57,5 +79,10 @@ public class PlayerManager : MonoBehaviour
         {
             turts.SetActive(true);
         }
+    }
+
+    void SaveGame()
+    {
+        SaveSystem.SavePlayer(itemManager, playerManager, storeManager);
     }
 }

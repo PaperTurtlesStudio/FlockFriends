@@ -1050,8 +1050,8 @@ GameObject:
   - component: {fileID: 442416538}
   - component: {fileID: 442416537}
   - component: {fileID: 442416536}
-  - component: {fileID: 442416540}
   - component: {fileID: 442416541}
+  - component: {fileID: 442416540}
   m_Layer: 5
   m_Name: StoreMenu
   m_TagString: Untagged
@@ -1175,6 +1175,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d2fd423f24d482e4f8376f8c29488a2a, type: 2}
   - {fileID: 11400000, guid: 355e457c76c86d342aa6adbd8b951fee, type: 2}
   storeManager: {fileID: 521779316}
+  runOnce: 1
 --- !u!1 &459146003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,6 +1432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e20c2bb03d8ed14f8d43744571de636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemManager: {fileID: 442416541}
 --- !u!1 &522679613
 GameObject:
   m_ObjectHideFlags: 0

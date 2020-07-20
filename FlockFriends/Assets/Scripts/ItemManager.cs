@@ -6,21 +6,39 @@ public class ItemManager : MonoBehaviour
 {
     static public List<Item> AlfansoWearable;
     public List<Item> AlfansoWearables;
+    ItemManager itemManager;
     public StoreManager storeManager;
+    PlayerManager playerManager;
 
-    static int runOnce = 0;
+    public bool runOnce = true;
 
     private void Awake()
     {
-        if(runOnce == 0)
+        if(runOnce)
         {
             AlfansoWearable = AlfansoWearables;
+            runOnce = false;
         }
     }
 
-    private void Update()
+    private void Start()
     {
-        
+        itemManager = gameObject.GetComponent<ItemManager>();
+        playerManager = gameObject.GetComponent<PlayerManager>();
+
+        if (!runOnce)
+        {
+            SavePlayer data = SaveSystem.LoadPlayer(itemManager, playerManager, storeManager);
+
+            if(data != null)
+            {
+                for (int i = 0; i < AlfansoWearable.Count; i++)
+                {
+                    AlfansoWearable[i].own = data.ownWearables[i];
+                    AlfansoWearable[i].wearing = data.wearWearables[i];
+                }
+            }
+        }
     }
 
     public void Wearing(int num)
@@ -35,7 +53,7 @@ public class ItemManager : MonoBehaviour
 
     public void BuyItem(int num)
     {
-        if(AlfansoWearable[num].cost <= storeManager.GetBread())
+        if(AlfansoWearable[num].cost <= StoreManager.breadCrumbs)
         {
             storeManager.BuyItems(AlfansoWearable[num].cost);
             AlfansoWearable[num].own = true;
