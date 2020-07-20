@@ -40,17 +40,15 @@ public class SavePlayer
         ownWearables[7] = ItemManager.AlfansoWearable[7].own;
 
         wearWearables = new bool[8];
-        wearWearables[0] = items.AlfansoWearables[0].wearing;
-        wearWearables[1] = items.AlfansoWearables[1].wearing;
-        wearWearables[2] = items.AlfansoWearables[2].wearing;
-        wearWearables[3] = items.AlfansoWearables[3].wearing;
-        wearWearables[4] = items.AlfansoWearables[4].wearing;
-        wearWearables[5] = items.AlfansoWearables[5].wearing;
-        wearWearables[6] = items.AlfansoWearables[6].wearing;
-        wearWearables[7] = items.AlfansoWearables[7].wearing;
-        
-        bread = storeManager.GetBread();
+        wearWearables[0] = ItemManager.AlfansoWearable[0].wearing;
+        wearWearables[1] = ItemManager.AlfansoWearable[1].wearing;
+        wearWearables[2] = ItemManager.AlfansoWearable[2].wearing;
+        wearWearables[3] = ItemManager.AlfansoWearable[3].wearing;
+        wearWearables[4] = ItemManager.AlfansoWearable[4].wearing;
+        wearWearables[5] = ItemManager.AlfansoWearable[5].wearing;
+        wearWearables[6] = ItemManager.AlfansoWearable[6].wearing;
+        wearWearables[7] = ItemManager.AlfansoWearable[7].wearing;
 
-        runOnce = items.runOnce;
+        bread = storeManager.GetBread();
     }
 }

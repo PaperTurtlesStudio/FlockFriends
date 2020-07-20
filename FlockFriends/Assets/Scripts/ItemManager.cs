@@ -14,11 +14,7 @@ public class ItemManager : MonoBehaviour
 
     private void Awake()
     {
-        if(runOnce)
-        {
-            AlfansoWearable = AlfansoWearables;
-            runOnce = false;
-        }
+        AlfansoWearable = AlfansoWearables;
     }
 
     private void Start()
