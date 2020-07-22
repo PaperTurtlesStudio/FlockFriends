@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6471295254820216315}
   - component: {fileID: 3451551492813690074}
   - component: {fileID: 5121848199267653542}
-  - component: {fileID: 2171203603878534994}
+  - component: {fileID: 4281481223248246698}
   m_Layer: 8
   m_Name: MountainObstacle1
   m_TagString: Obstacle
@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
---- !u!58 &2171203603878534994
-CircleCollider2D:
+--- !u!60 &4281481223248246698
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -110,5 +110,31 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.06
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.256, y: 0.256}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.060000002, y: 0.014}
+      - {x: 0.059000004, y: 0.030000001}
+      - {x: 0.056, y: 0.048}
+      - {x: 0.05, y: 0.052}
+      - {x: 0.003, y: 0.064}
+      - {x: -0.041, y: 0.064}
+      - {x: -0.045, y: 0.061000004}
+      - {x: -0.064, y: 0.012}
+      - {x: -0.064, y: 0.004}
+      - {x: -0.063, y: -0.009000001}
+      - {x: -0.061000004, y: -0.034}
+      - {x: -0.061000004, y: -0.038000003}
+      - {x: -0.031000001, y: -0.066}
+      - {x: 0.036000002, y: -0.066}
+      - {x: 0.045, y: -0.058000002}
+      - {x: 0.065000005, y: -0.035}
+      - {x: 0.065000005, y: -0.018000001}

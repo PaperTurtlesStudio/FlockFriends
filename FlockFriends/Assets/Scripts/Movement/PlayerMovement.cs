@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform sideCharacter3;
     public Vector2 playerMovement;
     public Canvas pauseMenu;
+    public MenuManager menuManager;
 
     GameObject gameManager;
     SequenceManager sequenceManager;
@@ -32,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
         gameManager = GameObject.Find("GameManager");
         sequenceManager = gameManager.GetComponent<SequenceManager>();
+        menuManager = gameManager.GetComponent<MenuManager>();
     }
     // Update is called once per frame
     void Update()

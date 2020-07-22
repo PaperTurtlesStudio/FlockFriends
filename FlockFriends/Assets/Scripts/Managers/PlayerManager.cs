@@ -8,21 +8,22 @@ using UnityEngine.SceneManagement;
 public class PlayerManager : MonoBehaviour
 {
     public StoreManager storeManager;
+    LevelManager levelmanager;
     public GameObject player;
     PlayerMovement playerMove;
     public GameObject deathMenu;
+    public GameObject pauseMenu;
     SequenceManager sequenceManager;
     ItemManager itemManager;
     PlayerManager playerManager;
+    MenuManager menuManager;
+
+    public bool PauseMenu;
+    public bool DeathMenu;
 
     public GameObject pengo;
     public GameObject ostar;
     public GameObject turts;
-
-
-    private void Awake()
-    {
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -32,18 +33,22 @@ public class PlayerManager : MonoBehaviour
         storeManager = gameObject.GetComponent<StoreManager>();
         itemManager = gameObject.GetComponent<ItemManager>();
         playerManager = gameObject.GetComponent<PlayerManager>();
+        levelmanager = gameObject.GetComponent<LevelManager>();
+        menuManager = gameObject.GetComponent<MenuManager>();
 
-        if (!itemManager.runOnce)
-        {
-            SavePlayer data = SaveSystem.LoadPlayer(itemManager, playerManager, storeManager);
+        SavePlayer data = SaveSystem.LoadPlayer(itemManager, playerManager, storeManager, levelmanager);
+        pengo.SetActive(data.pengoActive);
+        ostar.SetActive(data.ostarActive);
+        turts.SetActive(data.turtsActive);
 
-            if (data != null)
-            {
-                pengo.SetActive(data.pengoActive);
-                ostar.SetActive(data.ostarActive);
-                turts.SetActive(data.turtsActive);
-            }
-        }
+        pauseMenu.SetActive(data.pauseActive);
+        deathMenu.SetActive(data.deathActive);
+    }
+
+    private void Update()
+    {
+        PauseMenu = pauseMenu.activeInHierarchy;
+        DeathMenu = deathMenu.activeInHierarchy;
     }
 
     public void CharacterDeath(GameObject collision)
@@ -83,6 +88,6 @@ public class PlayerManager : MonoBehaviour
 
     void SaveGame()
     {
-        SaveSystem.SavePlayer(itemManager, playerManager, storeManager);
+        SaveSystem.SavePlayer(itemManager, playerManager, storeManager, levelmanager);
     }
 }

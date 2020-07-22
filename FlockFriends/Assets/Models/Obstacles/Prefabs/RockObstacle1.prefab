@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6471295254820216315}
   - component: {fileID: 3451551492813690074}
-  - component: {fileID: 3468237351688353023}
   - component: {fileID: 5121848199267653542}
+  - component: {fileID: 6811737139843517205}
   m_Layer: 8
   m_Name: RockObstacle1
   m_TagString: Obstacle
@@ -83,32 +83,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3468237351688353023
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7823296393573931256}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.00075248256}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.256, y: 0.256}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.16}
-  m_EdgeRadius: 0
 --- !u!114 &5121848199267653542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,3 +96,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+--- !u!60 &6811737139843517205
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7823296393573931256}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.256, y: 0.256}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.065000005, y: -0.079}
+      - {x: 0.065000005, y: -0.074}
+      - {x: 0.054, y: -0.032}
+      - {x: 0.053000003, y: -0.012}
+      - {x: 0.054, y: -0.011000001}
+      - {x: 0.055000003, y: 0.003}
+      - {x: 0.056, y: 0.020000001}
+      - {x: 0.058000002, y: 0.052}
+      - {x: 0.048, y: 0.061000004}
+      - {x: 0.029000001, y: 0.075}
+      - {x: 0.009000001, y: 0.09}
+      - {x: 0.0050000004, y: 0.091000006}
+      - {x: -0.039, y: 0.08400001}
+      - {x: -0.052, y: 0.082}
+      - {x: -0.056, y: 0.079}
+      - {x: -0.057000004, y: 0.068}
+      - {x: -0.058000002, y: 0.054}
+      - {x: -0.060000002, y: 0.024}
+      - {x: -0.062000003, y: -0.0050000004}
+      - {x: -0.064, y: -0.032}
+      - {x: -0.064, y: -0.040000003}
+      - {x: -0.060000002, y: -0.046000004}
+      - {x: -0.029000001, y: -0.09}
+      - {x: -0.008, y: -0.09}
+      - {x: 0.031000001, y: -0.085}
+      - {x: 0.061000004, y: -0.082}

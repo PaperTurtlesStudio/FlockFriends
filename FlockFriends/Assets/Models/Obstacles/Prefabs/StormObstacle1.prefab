@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6471295254820216315}
   - component: {fileID: 3451551492813690074}
   - component: {fileID: 5121848199267653542}
-  - component: {fileID: 6715341241674397355}
+  - component: {fileID: 7020063480273723294}
   m_Layer: 8
   m_Name: StormObstacle1
   m_TagString: Obstacle
@@ -96,8 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
---- !u!70 &6715341241674397355
-CapsuleCollider2D:
+--- !u!60 &7020063480273723294
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -110,5 +110,49 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.17, y: 0.12}
-  m_Direction: 1
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.256, y: 0.256}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.003, y: -0.033}
+      - {x: 0.025, y: -0.042000003}
+      - {x: 0.059000004, y: -0.040000003}
+      - {x: 0.069000006, y: -0.033}
+      - {x: 0.081, y: -0.025}
+      - {x: 0.085, y: -0.022000002}
+      - {x: 0.08400001, y: -0.013}
+      - {x: 0.080000006, y: -0.001}
+      - {x: 0.085, y: 0.023000002}
+      - {x: 0.085, y: 0.038000003}
+      - {x: 0.062000003, y: 0.059000004}
+      - {x: 0.042000003, y: 0.069000006}
+      - {x: 0.035, y: 0.069000006}
+      - {x: 0.026, y: 0.064}
+      - {x: 0.012, y: 0.059000004}
+      - {x: 0.007, y: 0.062000003}
+      - {x: -0.028, y: 0.066}
+      - {x: -0.035, y: 0.061000004}
+      - {x: -0.066, y: 0.040000003}
+      - {x: -0.079, y: 0.024}
+      - {x: -0.085, y: 0}
+      - {x: -0.085, y: -0.008}
+      - {x: -0.065000005, y: -0.028}
+      - {x: -0.053000003, y: -0.033}
+      - {x: -0.043, y: -0.043}
+      - {x: -0.039, y: -0.043}
+      - {x: -0.037, y: -0.07}
+      - {x: -0.035, y: -0.072000004}
+      - {x: -0.016, y: -0.071}
+      - {x: -0.015000001, y: -0.091000006}
+      - {x: -0.013, y: -0.093}
+      - {x: -0.010000001, y: -0.09200001}
+      - {x: 0.0050000004, y: -0.060000002}
+      - {x: 0.003, y: -0.05}
+      - {x: -0.010000001, y: -0.054}

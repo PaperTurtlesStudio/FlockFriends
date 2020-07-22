@@ -9,6 +9,7 @@ public class StoreManager : MonoBehaviour
     public ItemManager itemManager;
     StoreManager storeManager;
     PlayerManager playerManager;
+    LevelManager levelManager;
 
 
     void Start()
@@ -16,16 +17,13 @@ public class StoreManager : MonoBehaviour
         storeManager = gameObject.GetComponent<StoreManager>();
         itemManager = gameObject.GetComponent<ItemManager>();
         playerManager = gameObject.GetComponent<PlayerManager>();
+        levelManager = gameObject.GetComponent<LevelManager>();
 
-        
-        
-        SavePlayer data = SaveSystem.LoadPlayer(itemManager, playerManager, storeManager);
+        SavePlayer data = SaveSystem.LoadPlayer(itemManager, playerManager, storeManager, levelManager);
         if (data != null)
         {
             breadCrumbs = data.bread;
         }
-        
-
     }
 
     public void CollectBread(GameObject obj)
