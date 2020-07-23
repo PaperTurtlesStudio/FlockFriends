@@ -74,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
         {
             sequenceManager.SequenceSpeed = 7;
         }
+
     }
 
     void RotateLeft(Transform alfanso, Transform pengo, Transform ostar, Transform turts)
