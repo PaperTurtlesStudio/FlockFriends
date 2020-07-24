@@ -16,5 +16,5 @@ MonoBehaviour:
   Owner: Pengo
   own: 0
   wearing: 0
-  image: {fileID: 2365339308313440513, guid: ca1fe683d8872314481b6dbcd87cb1d1, type: 3}
+  image: {fileID: -5581249409835043684, guid: 7f231fcb961cd6344a3e6ea8b017987f, type: 3}
   cost: 15
