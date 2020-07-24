@@ -53,9 +53,7 @@ public class PlayerManager : MonoBehaviour
 
     public void CharacterDeath(GameObject collision)
     {
-        
         Destroy(collision.gameObject);
-        
         
         playerMove.speed = 0;
         sequenceManager.SequenceSpeed = 0;

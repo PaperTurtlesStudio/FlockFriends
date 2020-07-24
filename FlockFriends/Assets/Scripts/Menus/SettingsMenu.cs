@@ -62,7 +62,7 @@ public class SettingsMenu : MonoBehaviour
     public void SetVolume(float volume)
     {
         Volume = volume;
-        if (!isMute) 
+        if (isMute) 
         {
             audioMixer.SetFloat("Volume", -80f);
         }
@@ -77,6 +77,10 @@ public class SettingsMenu : MonoBehaviour
         if (isFullScreen)
         {
            Screen.fullScreen = isFullScreen;
+        }
+        else
+        {
+            Screen.fullScreen = false;
         }
     }
 

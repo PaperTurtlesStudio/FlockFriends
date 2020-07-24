@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: AlfansoHat2
   Owner: Alfanso
-  own: 1
-  wearing: 1
+  own: 0
+  wearing: 0
   image: {fileID: -6085209271259904505, guid: ca1fe683d8872314481b6dbcd87cb1d1, type: 3}
   cost: 10

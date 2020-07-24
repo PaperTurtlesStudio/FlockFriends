@@ -9,6 +9,7 @@ public class SequenceMovement : MonoBehaviour
     SequenceManager sequenceManager;
     Rigidbody2D rb;
     public Vector2 movement = new Vector2(0, -1);
+    public AudioSource audioSource;
 
 
     void Start()
@@ -16,11 +17,21 @@ public class SequenceMovement : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         gameManager = GameObject.Find("GameManager");
         sequenceManager = gameManager.GetComponent<SequenceManager>();
+        PlayWindSound();
     }
 
     // Update is called once per frame
     void Update()
     {
         rb.MovePosition(rb.position + (movement * sequenceManager.SequenceSpeed * Time.fixedDeltaTime));
+        
+    }
+
+    void PlayWindSound()
+    {
+        if (audioSource)
+        {
+            audioSource.PlayDelayed(5f);
+        }
     }
 }

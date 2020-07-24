@@ -27,6 +27,7 @@ public class ObstacleDestroy : MonoBehaviour
     {
         if(collision.gameObject.name == "Player")
         {
+            collision.otherCollider.GetComponent<AudioSource>().Play();
             pm.CharacterDeath(collision.gameObject);
         }
     }

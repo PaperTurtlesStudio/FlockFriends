@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SequenceManager : MonoBehaviour
 {
-    public int SequenceSpeed = 7;
+    public int SequenceSpeed;
 
     Canvas pauseMenu;
 
@@ -131,4 +131,6 @@ public class SequenceManager : MonoBehaviour
         }
         return null;
     }
+
+
 }

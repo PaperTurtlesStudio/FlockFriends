@@ -5,9 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    public SettingsMenu settingsMenu;
+    public AudioSource onClickSound;
+    public AudioSource onHoverSound;
+
+
+    public void PlayClickSound()
+    {
+        if (onClickSound)
+        {
+            onClickSound.Play();
+        }
+    }
+
+    public void PlayOnHover()
+    {
+        if (onHoverSound)
+        {
+            onHoverSound.Play();
+        }
+    }
+
     public void MainMenu()
     {
         SceneManager.LoadScene("Main");
+        if (settingsMenu)
+        {
+            SaveSystem.SaveOptions(settingsMenu);
+        }
     }
     public void QuitGame()
     {
