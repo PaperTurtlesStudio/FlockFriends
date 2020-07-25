@@ -37,9 +37,13 @@ public class PlayerManager : MonoBehaviour
         menuManager = gameObject.GetComponent<MenuManager>();
 
         SavePlayer data = SaveSystem.LoadPlayer(itemManager, playerManager, storeManager, levelmanager);
-        pengo.SetActive(data.pengoActive);
-        ostar.SetActive(data.ostarActive);
-        turts.SetActive(data.turtsActive);
+        if (data.pengoActive)
+        {
+            pengo.SetActive(data.pengoActive);
+            ostar.SetActive(data.ostarActive);
+            turts.SetActive(data.turtsActive);
+
+        }
 
         pauseMenu.SetActive(data.pauseActive);
         deathMenu.SetActive(data.deathActive);

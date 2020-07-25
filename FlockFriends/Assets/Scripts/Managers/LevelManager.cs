@@ -23,10 +23,7 @@ public class LevelManager : MonoBehaviour
 
         
         SavePlayer data = SaveSystem.LoadPlayer(itemManager, playerManager, storeManager, levelmanager);
-        if (data.runOnce)
-        {
-            Level = data.level;
-        }
+        Level = data.level;
     }
 
     // Update is called once per frame

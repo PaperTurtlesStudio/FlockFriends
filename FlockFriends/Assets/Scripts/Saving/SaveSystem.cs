@@ -40,7 +40,20 @@ public static class SaveSystem
             return data;
         }
     }
-    
+
+    public static void SaveNewGame()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/player.save";
+
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        NewGame data = new NewGame();
+
+        formatter.Serialize(stream, data);
+        stream.Close();
+    }
+
     public static void SaveOptions(SettingsMenu settingsMenu)
     {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -77,6 +90,4 @@ public static class SaveSystem
             return data;
         }
     }
-
-
 }

@@ -50,4 +50,9 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Store");
     }
+
+    public void NewGameButton()
+    {
+        SaveSystem.SaveNewGame();
+    }
 }
