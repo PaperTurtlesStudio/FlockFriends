@@ -57,19 +57,21 @@ public class SettingsMenu : MonoBehaviour
     {
         isMute = muteToggle.GetComponent<Toggle>().isOn;
         isFullScreen = FullScreenToggle.GetComponent<Toggle>().isOn;
-    }
-
-    public void SetVolume(float volume)
-    {
-        Volume = volume;
-        if (isMute) 
+        if (muteToggle.GetComponent<Toggle>().isOn)
         {
             audioMixer.SetFloat("Volume", -80f);
         }
         else
         {
-            audioMixer.SetFloat("Volume", volume);
+            SetVolume(volumeSlider.GetComponent<Slider>().value);
         }
+    }
+
+    public void SetVolume(float volume)
+    {
+        Volume = volume;
+        audioMixer.SetFloat("Volume", volume);
+        
     }
 
     public void SetFullScreen(bool isFullScreen)
