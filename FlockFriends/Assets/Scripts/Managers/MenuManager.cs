@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public SettingsMenu settingsMenu;
+    public ItemManager itemManager;
+    public PlayerManager playerManager;
+    public StoreManager storeManager;
+    public LevelManager levelManager;
     public AudioSource onClickSound;
     public AudioSource onHoverSound;
 
@@ -32,6 +36,7 @@ public class MenuManager : MonoBehaviour
         if (settingsMenu)
         {
             SaveSystem.SaveOptions(settingsMenu);
+            SaveSystem.SavePlayer(itemManager, playerManager, storeManager, levelManager);
         }
     }
     public void QuitGame()

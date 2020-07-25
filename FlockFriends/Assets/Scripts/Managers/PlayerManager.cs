@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject player;
     PlayerMovement playerMove;
     public GameObject deathMenu;
+    public Canvas BreadCounter;
     public GameObject pauseMenu;
     SequenceManager sequenceManager;
     ItemManager itemManager;
@@ -58,6 +59,8 @@ public class PlayerManager : MonoBehaviour
     public void CharacterDeath(GameObject collision)
     {
         Destroy(collision.gameObject);
+
+        BreadCounter.gameObject.SetActive(false);
         
         playerMove.speed = 0;
         sequenceManager.SequenceSpeed = 0;

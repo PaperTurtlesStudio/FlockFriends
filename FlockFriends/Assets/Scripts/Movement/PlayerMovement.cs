@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform sideCharacter3;
     public Vector2 playerMovement;
     public Canvas pauseMenu;
+    public Canvas breadCounter;
     public MenuManager menuManager;
 
     GameObject gameManager;
@@ -64,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.P))
         {
             pauseMenu.gameObject.SetActive(true);
+            breadCounter.gameObject.SetActive(false);
             if (pauseMenu)
             {
                 sequenceManager.SequenceSpeed = 0;
