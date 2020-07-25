@@ -15,6 +15,6 @@ MonoBehaviour:
   name: AlfansoHat1
   Owner: Alfanso
   own: 1
-  wearing: 0
-  image: {fileID: -4584001840792588798, guid: ca1fe683d8872314481b6dbcd87cb1d1, type: 3}
+  wearing: 1
+  image: {fileID: 21300000, guid: 30740ff0e5c663b4887d6825609f4779, type: 3}
   cost: 1
