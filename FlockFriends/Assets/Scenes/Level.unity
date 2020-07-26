@@ -721,6 +721,7 @@ MonoBehaviour:
   pengo: {fileID: 939810964}
   ostar: {fileID: 1236818013}
   turts: {fileID: 158140936}
+  HowToPlayRun: 1
 --- !u!4 &223961499
 Transform:
   m_ObjectHideFlags: 0
@@ -3744,6 +3745,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HowTo: {fileID: 18557403}
   BreadText: {fileID: 1685187500}
+  itemManager: {fileID: 0}
+  playerManager: {fileID: 0}
+  storeManager: {fileID: 0}
+  levelmanager: {fileID: 0}
 --- !u!1 &1320237624
 GameObject:
   m_ObjectHideFlags: 0

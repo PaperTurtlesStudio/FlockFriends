@@ -6,11 +6,23 @@ public class HowToPlayScreen : MonoBehaviour
 {
     public GameObject HowTo;
     public GameObject BreadText;
-    
+    public ItemManager itemManager;
+    public PlayerManager playerManager;
+    public StoreManager storeManager;
+    public LevelManager levelmanager;
+
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(DeactitivateScreen());
+        SavePlayer data = SaveSystem.LoadPlayer(itemManager, playerManager, storeManager, levelmanager);
+        if (data.runOnce)
+        {
+            HowTo.SetActive(false);
+        }
+        else
+        {
+            StartCoroutine(DeactitivateScreen());
+        }
     }
 
     IEnumerator DeactitivateScreen()

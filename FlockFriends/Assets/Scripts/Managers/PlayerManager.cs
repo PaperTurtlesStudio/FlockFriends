@@ -26,6 +26,8 @@ public class PlayerManager : MonoBehaviour
     public GameObject ostar;
     public GameObject turts;
 
+    public bool HowToPlayRun = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +56,9 @@ public class PlayerManager : MonoBehaviour
     {
         PauseMenu = pauseMenu.activeInHierarchy;
         DeathMenu = deathMenu.activeInHierarchy;
+        
+        HowToPlayRun = true;
+        
     }
 
     public void CharacterDeath(GameObject collision)

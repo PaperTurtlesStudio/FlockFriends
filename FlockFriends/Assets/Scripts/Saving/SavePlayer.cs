@@ -123,6 +123,6 @@ public class SavePlayer
 
         bread = storeManager.GetBread();
 
-        runOnce = true;
+        runOnce = playerManager.HowToPlayRun;
     }
 }

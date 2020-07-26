@@ -13,7 +13,6 @@ public class MenuManager : MonoBehaviour
     public AudioSource onClickSound;
     public AudioSource onHoverSound;
 
-
     public void PlayClickSound()
     {
         if (onClickSound)
@@ -60,4 +59,6 @@ public class MenuManager : MonoBehaviour
     {
         SaveSystem.SaveNewGame();
     }
+
+    
 }
