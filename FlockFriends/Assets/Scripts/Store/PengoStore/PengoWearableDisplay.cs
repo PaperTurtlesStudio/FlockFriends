@@ -8,6 +8,7 @@ public class PengoWearableDisplay : MonoBehaviour
     public GameObject StoreManager;
     public StoreManager storeManager;
     public ItemManager itemManager;
+    public Image PurchaseCover;
 
     [SerializeField]
     public int ListNumber;
@@ -26,6 +27,19 @@ public class PengoWearableDisplay : MonoBehaviour
         price.text = ItemManager.PengoWearable[ListNumber].cost.ToString();
         wearableSprite.sprite = ItemManager.PengoWearable[ListNumber].image;
         wearableSpriteDemo.sprite = ItemManager.PengoWearable[ListNumber].image;
+    }
+    private void Update()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            if (ItemManager.PengoWearable[i].own)
+            {
+                if (ListNumber == i)
+                {
+                    PurchaseCover.gameObject.SetActive(true);
+                }
+            }
+        }
     }
 
     public void WearPengoItem()

@@ -11,6 +11,10 @@ public class StoreManager : MonoBehaviour
     PlayerManager playerManager;
     LevelManager levelManager;
 
+    public Image PengoCover;
+    public Image OstarCover;
+    public Image TurtsCover;
+
 
     void Start()
     {
@@ -23,6 +27,9 @@ public class StoreManager : MonoBehaviour
         if (data != null)
         {
             breadCrumbs = data.bread;
+            PengoCover.gameObject.SetActive(!data.pengoActive);
+            OstarCover.gameObject.SetActive(!data.ostarActive);
+            TurtsCover.gameObject.SetActive(!data.turtsActive);
         }
     }
 

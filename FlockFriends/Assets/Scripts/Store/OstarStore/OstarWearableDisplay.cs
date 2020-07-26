@@ -8,6 +8,7 @@ public class OstarWearableDisplay : MonoBehaviour
     public GameObject StoreManager;
     public StoreManager storeManager;
     public ItemManager itemManager;
+    public Image PurchaseCover;
 
     [SerializeField]
     public int ListNumber;
@@ -26,6 +27,19 @@ public class OstarWearableDisplay : MonoBehaviour
         price.text = ItemManager.OstarWearable[ListNumber].cost.ToString();
         wearableSprite.sprite = ItemManager.OstarWearable[ListNumber].image;
         wearableSpriteDemo.sprite = ItemManager.OstarWearable[ListNumber].image;
+    }
+    private void Update()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            if (ItemManager.OstarWearable[i].own)
+            {
+                if (ListNumber == i)
+                {
+                    PurchaseCover.gameObject.SetActive(true);
+                }
+            }
+        }
     }
 
     public void WearOstarItem()

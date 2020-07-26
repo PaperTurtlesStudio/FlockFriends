@@ -8,6 +8,7 @@ public class TurtsWearableDisplay : MonoBehaviour
     public GameObject StoreManager;
     public StoreManager storeManager;
     public ItemManager itemManager;
+    public Image PurchaseCover;
 
     [SerializeField]
     public int ListNumber;
@@ -26,6 +27,19 @@ public class TurtsWearableDisplay : MonoBehaviour
         price.text = ItemManager.TurtsWearable[ListNumber].cost.ToString();
         wearableSprite.sprite = ItemManager.TurtsWearable[ListNumber].image;
         wearableSpriteDemo.sprite = ItemManager.TurtsWearable[ListNumber].image;
+    }
+    private void Update()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            if (ItemManager.TurtsWearable[i].own)
+            {
+                if (ListNumber == i)
+                {
+                    PurchaseCover.gameObject.SetActive(true);
+                }
+            }
+        }
     }
 
     public void WearTurtsItem()

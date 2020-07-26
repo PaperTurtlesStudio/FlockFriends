@@ -8,6 +8,7 @@ public class AlfansoWearableDisplay : MonoBehaviour
     public GameObject StoreManager;
     public StoreManager storeManager;
     public ItemManager itemManager;
+    public Image PurchaseCover;
 
     [SerializeField]
     public int ListNumber;
@@ -26,6 +27,20 @@ public class AlfansoWearableDisplay : MonoBehaviour
         price.text = ItemManager.AlfansoWearable[ListNumber].cost.ToString();
         wearableSprite.sprite = ItemManager.AlfansoWearable[ListNumber].image;
         wearableSpriteDemo.sprite = ItemManager.AlfansoWearable[ListNumber].image;
+    }
+
+    private void Update()
+    {
+        for (int i = 0; i < 8; i++)
+        {
+            if (ItemManager.AlfansoWearable[i].own)
+            {
+                if(ListNumber == i)
+                {
+                    PurchaseCover.gameObject.SetActive(true);
+                }
+            }
+        }
     }
 
     public void WearAlfansoItem()
