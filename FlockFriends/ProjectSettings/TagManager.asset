@@ -9,6 +9,7 @@ TagManager:
   - Walls
   - Decorate
   - Obstacle
+  - Character
   layers:
   - Default
   - TransparentFX
