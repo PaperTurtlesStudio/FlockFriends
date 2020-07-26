@@ -1459,7 +1459,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1832413344}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1993,7 +1993,7 @@ RectTransform:
   m_Children:
   - {fileID: 1847721013}
   m_Father: {fileID: 1832413344}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6456,7 +6456,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1832413344}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10787,7 +10787,7 @@ RectTransform:
   - {fileID: 1284739155}
   - {fileID: 1409918021}
   m_Father: {fileID: 1832413344}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15529,9 +15529,9 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   PauseMenu: 0
   DeathMenu: 0
-  pengo: {fileID: 0}
-  ostar: {fileID: 0}
-  turts: {fileID: 0}
+  pengo: {fileID: 1272602754}
+  ostar: {fileID: 736035496}
+  turts: {fileID: 1928918962}
   HowToPlayRun: 0
 --- !u!1 &1041511935
 GameObject:
@@ -16755,7 +16755,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1832413344}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17212,8 +17212,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemManager: {fileID: 1040336041}
   PengoCover: {fileID: 0}
+  PengoButton: {fileID: 0}
   OstarCover: {fileID: 0}
+  OstarButton: {fileID: 0}
   TurtsCover: {fileID: 0}
+  TurtsButton: {fileID: 0}
 --- !u!1 &1241777021
 GameObject:
   m_ObjectHideFlags: 0
@@ -17847,8 +17850,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemManager: {fileID: 1040336041}
   PengoCover: {fileID: 0}
+  PengoButton: {fileID: 0}
   OstarCover: {fileID: 0}
+  OstarButton: {fileID: 0}
   TurtsCover: {fileID: 0}
+  TurtsButton: {fileID: 0}
 --- !u!1 &1284739154
 GameObject:
   m_ObjectHideFlags: 0
@@ -19247,8 +19253,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemManager: {fileID: 1040336041}
   PengoCover: {fileID: 0}
+  PengoButton: {fileID: 0}
   OstarCover: {fileID: 0}
+  OstarButton: {fileID: 0}
   TurtsCover: {fileID: 0}
+  TurtsButton: {fileID: 0}
 --- !u!224 &1387467900
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23704,8 +23713,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemManager: {fileID: 1040336041}
   PengoCover: {fileID: 0}
+  PengoButton: {fileID: 0}
   OstarCover: {fileID: 0}
+  OstarButton: {fileID: 0}
   TurtsCover: {fileID: 0}
+  TurtsButton: {fileID: 0}
 --- !u!1 &1650654861
 GameObject:
   m_ObjectHideFlags: 0
@@ -25610,12 +25622,12 @@ RectTransform:
   - {fileID: 933414341}
   - {fileID: 444691713}
   - {fileID: 1272602755}
-  - {fileID: 736035497}
-  - {fileID: 1928918963}
-  - {fileID: 148725502}
   - {fileID: 481398530}
+  - {fileID: 736035497}
   - {fileID: 130902896}
+  - {fileID: 1928918963}
   - {fileID: 1135299956}
+  - {fileID: 148725502}
   m_Father: {fileID: 1040336045}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25638,8 +25650,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemManager: {fileID: 1040336041}
   PengoCover: {fileID: 481398531}
+  PengoButton: {fileID: 1272602754}
   OstarCover: {fileID: 130902897}
+  OstarButton: {fileID: 736035496}
   TurtsCover: {fileID: 1135299957}
+  TurtsButton: {fileID: 1928918962}
 --- !u!1 &1833760265
 GameObject:
   m_ObjectHideFlags: 0
@@ -26736,7 +26751,7 @@ RectTransform:
   - {fileID: 521185964}
   - {fileID: 649964930}
   m_Father: {fileID: 1832413344}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

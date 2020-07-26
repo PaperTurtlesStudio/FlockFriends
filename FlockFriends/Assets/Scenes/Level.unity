@@ -821,7 +821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: Forest
-  NumberOfSequences: 1
+  NumberOfSequences: 2
   AmountSequencesPassed: 0
 --- !u!114 &223961501
 MonoBehaviour:
@@ -883,8 +883,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemManager: {fileID: 223961503}
   PengoCover: {fileID: 0}
+  PengoButton: {fileID: 0}
   OstarCover: {fileID: 0}
+  OstarButton: {fileID: 0}
   TurtsCover: {fileID: 0}
+  TurtsButton: {fileID: 0}
 --- !u!114 &223961503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2090,7 +2093,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.079262, y: 2, z: -20}
+  m_LocalPosition: {x: -18.079262, y: 19.91, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5313,7 +5316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760022206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.1, y: 0.99, z: -8.7224}
+  m_LocalPosition: {x: -18.1, y: 18.9, z: -8.7224}
   m_LocalScale: {x: 0.72729, y: 0.72729, z: 0.72729}
   m_Children:
   - {fileID: 67488358}
@@ -5348,7 +5351,7 @@ PrefabInstance:
     - target: {fileID: 7931684075810675055, guid: b8df1923fe3453f46b8bbfd31af96529,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.7
+      value: 36.43953
       objectReference: {fileID: 0}
     - target: {fileID: 7931684075810675055, guid: b8df1923fe3453f46b8bbfd31af96529,
         type: 3}
