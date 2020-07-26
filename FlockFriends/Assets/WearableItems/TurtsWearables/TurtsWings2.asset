@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Turts Wings 1
   Owner: Turts
-  own: 0
+  own: 1
   wearing: 0
-  image: {fileID: 8145951374611147372, guid: ca1fe683d8872314481b6dbcd87cb1d1, type: 3}
-  cost: 100
+  image: {fileID: 21300000, guid: 9c9e10726dd2d4245847b3bfc8b70c4c, type: 3}
+  cost: 1

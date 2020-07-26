@@ -545,7 +545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &158140937
 Transform:
   m_ObjectHideFlags: 0
@@ -588,8 +588,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 223961497}
   itemManager: {fileID: 223961503}
-  TurtsSpriteRenderer: {fileID: 0}
-  WearableItem: {fileID: 0}
+  TurtsSpriteRenderer: {fileID: 1473827451}
+  WearableItem: {fileID: 1473827448}
 --- !u!70 &158140940
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -764,6 +764,7 @@ GameObject:
   - component: {fileID: 223961506}
   - component: {fileID: 223961505}
   - component: {fileID: 223961507}
+  - component: {fileID: 223961508}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1165,6 +1166,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storeManager: {fileID: 0}
   BreadText: {fileID: 1685187502}
+--- !u!114 &223961508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223961497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5889549cdaf4d5409336ac97f8403e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PengoAnimator: {fileID: 0}
+  OstarAnimator: {fileID: 0}
+  TurtsAnimator: {fileID: 1473827450}
 --- !u!1 &250102012
 GameObject:
   m_ObjectHideFlags: 0
@@ -5351,7 +5367,7 @@ PrefabInstance:
     - target: {fileID: 7931684075810675055, guid: b8df1923fe3453f46b8bbfd31af96529,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 36.43953
+      value: 35.9
       objectReference: {fileID: 0}
     - target: {fileID: 7931684075810675055, guid: b8df1923fe3453f46b8bbfd31af96529,
         type: 3}
