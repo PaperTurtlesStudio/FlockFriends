@@ -30,6 +30,7 @@ public class HowToPlayScreen : MonoBehaviour
         yield return new WaitForSeconds(7f);
 
         HowTo.SetActive(false);
+
         BreadText.SetActive(true);
     }
 }

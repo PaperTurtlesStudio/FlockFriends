@@ -106,7 +106,7 @@ public class SequenceManager : MonoBehaviour
     {
         for (int i = 0; i < sequencePool.Count; i++)
         {
-            if (sequencePool[i].transform.position.y < -105)
+            if (sequencePool[i].transform.position.y < -120)
             {
                 sequencePool[i].SetActive(false);
             }
