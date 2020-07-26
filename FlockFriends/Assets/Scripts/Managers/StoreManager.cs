@@ -12,8 +12,11 @@ public class StoreManager : MonoBehaviour
     LevelManager levelManager;
 
     public Image PengoCover;
+    public GameObject PengoButton;
     public Image OstarCover;
+    public GameObject OstarButton;
     public Image TurtsCover;
+    public GameObject TurtsButton;
 
 
     void Start()
@@ -28,8 +31,11 @@ public class StoreManager : MonoBehaviour
         {
             breadCrumbs = data.bread;
             PengoCover.gameObject.SetActive(!data.pengoActive);
+            PengoButton.SetActive(data.pengoActive);
             OstarCover.gameObject.SetActive(!data.ostarActive);
+            OstarButton.SetActive(data.ostarActive);
             TurtsCover.gameObject.SetActive(!data.turtsActive);
+            TurtsButton.SetActive(data.turtsActive);
         }
     }
 
