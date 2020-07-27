@@ -10,15 +10,21 @@ public class AnimationManager : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < ItemManager.TurtsWearable.Count; i++)
+        AnimateTheWearable(ItemManager.OstarWearable, OstarAnimator);
+        AnimateTheWearable(ItemManager.TurtsWearable, TurtsAnimator);
+    }
+
+    void AnimateTheWearable(List<Item> List, Animator animator)
+    {
+        for (int i = 0; i < List.Count; i++)
         {
-            if (ItemManager.TurtsWearable[i].wearing)
+            if (List[i].wearing)
             {
-                TurtsAnimator.SetBool(i.ToString(), true);
+                animator.SetBool(i.ToString(), true);
             }
             else
             {
-                TurtsAnimator.SetBool(i.ToString(), false);
+                animator.SetBool(i.ToString(), false);
             }
         }
     }

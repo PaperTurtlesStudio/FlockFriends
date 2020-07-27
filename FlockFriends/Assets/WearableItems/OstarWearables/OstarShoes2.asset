@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Ostar Shoe 1
   Owner: Ostar
-  own: 0
-  wearing: 0
-  image: {fileID: -5767162948771900228, guid: ca1fe683d8872314481b6dbcd87cb1d1, type: 3}
+  own: 1
+  wearing: 1
+  image: {fileID: 21300000, guid: 6a35347ffc737194ab3001c741746255, type: 3}
   cost: 20

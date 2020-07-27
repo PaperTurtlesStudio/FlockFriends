@@ -1179,7 +1179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PengoAnimator: {fileID: 0}
-  OstarAnimator: {fileID: 0}
+  OstarAnimator: {fileID: 1412587653}
   TurtsAnimator: {fileID: 1473827450}
 --- !u!1 &250102012
 GameObject:
@@ -3551,7 +3551,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1236818014
 Transform:
   m_ObjectHideFlags: 0
