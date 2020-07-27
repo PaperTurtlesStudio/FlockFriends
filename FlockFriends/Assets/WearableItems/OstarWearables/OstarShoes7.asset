@@ -17,4 +17,4 @@ MonoBehaviour:
   own: 0
   wearing: 0
   image: {fileID: 21300000, guid: 178d4b51615adb44789ca589d779949f, type: 3}
-  cost: 20
+  cost: 800

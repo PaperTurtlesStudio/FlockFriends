@@ -16,5 +16,5 @@ MonoBehaviour:
   Owner: Alfanso
   own: 0
   wearing: 0
-  image: {fileID: -4584001840792588798, guid: ca1fe683d8872314481b6dbcd87cb1d1, type: 3}
-  cost: 10
+  image: {fileID: 21300000, guid: 15a62295e3e84e2469a757b4feaf4e35, type: 3}
+  cost: 200
