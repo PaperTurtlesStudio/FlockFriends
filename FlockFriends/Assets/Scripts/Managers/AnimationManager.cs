@@ -10,6 +10,7 @@ public class AnimationManager : MonoBehaviour
 
     private void Start()
     {
+        AnimateTheWearable(ItemManager.PengoWearable, PengoAnimator);
         AnimateTheWearable(ItemManager.OstarWearable, OstarAnimator);
         AnimateTheWearable(ItemManager.TurtsWearable, TurtsAnimator);
     }
