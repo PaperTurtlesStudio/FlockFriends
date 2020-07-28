@@ -9,6 +9,7 @@ public class OstarWearableDisplay : MonoBehaviour
     public StoreManager storeManager;
     public ItemManager itemManager;
     public Image PurchaseCover;
+    public Image WearingCover;
 
     [SerializeField]
     public int ListNumber;
@@ -37,6 +38,16 @@ public class OstarWearableDisplay : MonoBehaviour
                 if (ListNumber == i)
                 {
                     PurchaseCover.gameObject.SetActive(true);
+                    WearingCover.gameObject.SetActive(false);
+                }
+            }
+
+            if (ItemManager.OstarWearable[i].wearing)
+            {
+                if (ListNumber == i)
+                {
+                    WearingCover.gameObject.SetActive(true);
+                    PurchaseCover.gameObject.SetActive(false);
                 }
             }
         }

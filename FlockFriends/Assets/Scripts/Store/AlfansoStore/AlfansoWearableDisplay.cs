@@ -9,6 +9,7 @@ public class AlfansoWearableDisplay : MonoBehaviour
     public StoreManager storeManager;
     public ItemManager itemManager;
     public Image PurchaseCover;
+    public Image WearingCover;
 
     [SerializeField]
     public int ListNumber;
@@ -35,9 +36,19 @@ public class AlfansoWearableDisplay : MonoBehaviour
         {
             if (ItemManager.AlfansoWearable[i].own)
             {
-                if(ListNumber == i)
+                if (ListNumber == i)
                 {
                     PurchaseCover.gameObject.SetActive(true);
+                    WearingCover.gameObject.SetActive(false);
+                }
+            }
+
+            if (ItemManager.AlfansoWearable[i].wearing)
+            {
+                if(ListNumber == i)
+                {
+                    WearingCover.gameObject.SetActive(true);
+                    PurchaseCover.gameObject.SetActive(false);
                 }
             }
         }

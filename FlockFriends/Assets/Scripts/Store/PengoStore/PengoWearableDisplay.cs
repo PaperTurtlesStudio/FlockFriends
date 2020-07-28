@@ -9,6 +9,7 @@ public class PengoWearableDisplay : MonoBehaviour
     public StoreManager storeManager;
     public ItemManager itemManager;
     public Image PurchaseCover;
+    public Image WearingCover;
 
     [SerializeField]
     public int ListNumber;
@@ -37,12 +38,22 @@ public class PengoWearableDisplay : MonoBehaviour
                 if (ListNumber == i)
                 {
                     PurchaseCover.gameObject.SetActive(true);
+                    WearingCover.gameObject.SetActive(false);
+                }
+            }
+
+            if (ItemManager.PengoWearable[i].wearing)
+            {
+                if (ListNumber == i)
+                {
+                    WearingCover.gameObject.SetActive(true);
+                    PurchaseCover.gameObject.SetActive(false);
                 }
             }
         }
     }
 
-    public void WearPengoItem()
+public void WearPengoItem()
     {
         if (wearableSpriteDemo.gameObject.activeInHierarchy == true && ItemManager.PengoWearable[ListNumber].own == true)
         {
