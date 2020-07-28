@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Ostar Shoe 1
   Owner: Ostar
   own: 1
-  wearing: 1
+  wearing: 0
   image: {fileID: 21300000, guid: 6a35347ffc737194ab3001c741746255, type: 3}
   cost: 50
