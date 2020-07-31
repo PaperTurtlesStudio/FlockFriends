@@ -4260,6 +4260,7 @@ MonoBehaviour:
   playerManager: {fileID: 0}
   storeManager: {fileID: 0}
   levelmanager: {fileID: 0}
+  RunOnce: 0
 --- !u!114 &1285832119
 MonoBehaviour:
   m_ObjectHideFlags: 0
