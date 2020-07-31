@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: PengoJetpack1
   Owner: Pengo
-  own: 1
+  own: 0
   wearing: 0
   image: {fileID: 21300000, guid: 2b103bc9d37882e4dab67cdcc85b9b9b, type: 3}
   cost: 150

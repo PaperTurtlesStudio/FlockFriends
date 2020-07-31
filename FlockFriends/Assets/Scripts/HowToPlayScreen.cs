@@ -10,6 +10,7 @@ public class HowToPlayScreen : MonoBehaviour
     public PlayerManager playerManager;
     public StoreManager storeManager;
     public LevelManager levelmanager;
+    public bool RunOnce = false;
 
     // Update is called once per frame
     void Update()
@@ -19,10 +20,11 @@ public class HowToPlayScreen : MonoBehaviour
         {
             HowTo.SetActive(false);
         }
-        else
+        else if (!RunOnce)
         {
             StartCoroutine(DeactitivateScreen());
         }
+        RunOnce = data.runOnce;
     }
 
     IEnumerator DeactitivateScreen()
